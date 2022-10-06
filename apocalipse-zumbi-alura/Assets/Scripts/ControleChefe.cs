@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class ControleChefe : MonoBehaviour, IMatavel
 {
@@ -11,6 +12,7 @@ public class ControleChefe : MonoBehaviour, IMatavel
     private AnimacaoPersonagem animacaoChefe;
     private MovimentoPersonagem movimentoChefe;
     public GameObject KitMedico;
+    public Slider sliderVidaChefe;
 
     void Start()
     {
@@ -20,6 +22,9 @@ public class ControleChefe : MonoBehaviour, IMatavel
         agente.speed = statusChefe.Velocidade;
         animacaoChefe = GetComponent<AnimacaoPersonagem>();
         movimentoChefe = GetComponent<MovimentoPersonagem>();
+
+        sliderVidaChefe.maxValue = statusChefe.VidaInicial;
+        AtualizarInterface();
     }
 
     // Update is called once per frame
@@ -54,7 +59,8 @@ public class ControleChefe : MonoBehaviour, IMatavel
     public void TomarDano(int dano)
     {
         statusChefe.Vida -= dano;
-        if(statusChefe.Vida <= 0)
+        AtualizarInterface();
+        if (statusChefe.Vida <= 0)
         {
             Morrer();
         }
@@ -68,5 +74,10 @@ public class ControleChefe : MonoBehaviour, IMatavel
         agente.enabled = false;
         Instantiate(KitMedico, transform.position, Quaternion.identity);
         Destroy(gameObject, 2);
+    }
+
+    void AtualizarInterface()
+    {
+        sliderVidaChefe.value = statusChefe.Vida;
     }
 }
