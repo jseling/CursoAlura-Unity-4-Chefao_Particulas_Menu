@@ -13,6 +13,8 @@ public class ControleChefe : MonoBehaviour, IMatavel
     private MovimentoPersonagem movimentoChefe;
     public GameObject KitMedico;
     public Slider sliderVidaChefe;
+    public Image ImageSlider;
+    public Color CorDaVidaMaxima, CorDaVidaMinima;
 
     void Start()
     {
@@ -79,5 +81,8 @@ public class ControleChefe : MonoBehaviour, IMatavel
     void AtualizarInterface()
     {
         sliderVidaChefe.value = statusChefe.Vida;
+        float porcentagemDaVida = (float)statusChefe.Vida / statusChefe.VidaInicial;
+        Color corDaVida = Color.Lerp(CorDaVidaMinima, CorDaVidaMaxima, porcentagemDaVida);
+        ImageSlider.color = corDaVida;
     }
 }

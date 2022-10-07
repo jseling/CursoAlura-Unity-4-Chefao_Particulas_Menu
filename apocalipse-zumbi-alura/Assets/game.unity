@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 720377696, guid: d591b1fdc7bfb15448778a9a34427474, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 954979905, guid: d591b1fdc7bfb15448778a9a34427474, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -185,6 +189,42 @@ PrefabInstance:
     - target: {fileID: 4941635705825534, guid: d591b1fdc7bfb15448778a9a34427474, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1383955373462940487, guid: d591b1fdc7bfb15448778a9a34427474, type: 3}
+      propertyPath: ImageSlider
+      value: 
+      objectReference: {fileID: 559662980}
+    - target: {fileID: 1383955373462940487, guid: d591b1fdc7bfb15448778a9a34427474, type: 3}
+      propertyPath: CorDaVidaMaxima.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1383955373462940487, guid: d591b1fdc7bfb15448778a9a34427474, type: 3}
+      propertyPath: CorDaVidaMaxima.b
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 1383955373462940487, guid: d591b1fdc7bfb15448778a9a34427474, type: 3}
+      propertyPath: CorDaVidaMaxima.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1383955373462940487, guid: d591b1fdc7bfb15448778a9a34427474, type: 3}
+      propertyPath: CorDaVidaMaxima.r
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 1383955373462940487, guid: d591b1fdc7bfb15448778a9a34427474, type: 3}
+      propertyPath: CorDaVidaMinima.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1383955373462940487, guid: d591b1fdc7bfb15448778a9a34427474, type: 3}
+      propertyPath: CorDaVidaMinima.b
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 1383955373462940487, guid: d591b1fdc7bfb15448778a9a34427474, type: 3}
+      propertyPath: CorDaVidaMinima.g
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 1383955373462940487, guid: d591b1fdc7bfb15448778a9a34427474, type: 3}
+      propertyPath: CorDaVidaMinima.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d591b1fdc7bfb15448778a9a34427474, type: 3}
@@ -920,8 +960,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1adce5a56843d874ba62ae130f503fc6, type: 3}
-  m_Type: 2
+  m_Sprite: {fileID: 21300000, guid: 143d8b5d4f40edd49a675f97ce62be92, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3276,6 +3316,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1105362988413674, guid: bf4e53320739441f58d231c2ee884b66, type: 3}
   m_PrefabInstance: {fileID: 1189093054}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &559662980 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 954979906, guid: d591b1fdc7bfb15448778a9a34427474, type: 3}
+  m_PrefabInstance: {fileID: 5771177}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &567497178
 GameObject:
   m_ObjectHideFlags: 0
@@ -6902,23 +6953,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 1f634d818d14cbc4eadbdf6d2bbd35c6, type: 3}
---- !u!1 &1276078617 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1276078617, guid: d591b1fdc7bfb15448778a9a34427474, type: 3}
-  m_PrefabInstance: {fileID: 5771177}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1276078622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1276078617}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 748ae6ce86411c2408a42cb4462b2dfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1281805443
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8717,14 +8751,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1493989393}
-  m_LocalRotation: {x: -0.5418942, y: -0.01617429, z: -0.006047401, w: -0.8402693}
+  m_LocalRotation: {x: 0.53729963, y: 0, z: 0, w: 0.8433915}
   m_LocalPosition: {x: -31.84, y: 19.9, z: -25.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 65.572, y: -355.321, z: 3.839}
+  m_LocalEulerAnglesHint: {x: 65, y: 0, z: 0}
 --- !u!114 &1493989397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11197,15 +11231,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.33333334, b: 0.33333334, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6f8610b37d626b644a07d4d66b873992, type: 3}
-  m_Type: 2
+  m_Sprite: {fileID: 21300000, guid: 70e0c38e6a0ebf54483774b63af9beec, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4

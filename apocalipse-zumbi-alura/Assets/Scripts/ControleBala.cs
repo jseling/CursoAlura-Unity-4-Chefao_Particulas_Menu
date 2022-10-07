@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ControleBala : MonoBehaviour
 {
-    public float Velocidade = 20;
+    public float Velocidade = 30;
 
     private Rigidbody compRigidBody;
 
@@ -13,7 +13,8 @@ public class ControleBala : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        compRigidBody = GetComponent<Rigidbody>();   
+        compRigidBody = GetComponent<Rigidbody>();
+        Destroy(gameObject, 1);
     }
 
     // Update is called once per frame
