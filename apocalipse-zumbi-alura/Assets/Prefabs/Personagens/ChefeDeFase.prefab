@@ -144,7 +144,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &720377697
 RectTransform:
   m_ObjectHideFlags: 0
@@ -571,6 +571,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   KitMedico: {fileID: 1060151288946202, guid: 6150c6f66b7034ec5b3672478195682a, type: 3}
   sliderVidaChefe: {fileID: 105935360}
+  ImageSlider: {fileID: 954979906}
+  CorDaVidaMaxima: {r: 0.33333334, g: 1, b: 0.33333334, a: 1}
+  CorDaVidaMinima: {r: 1, g: 0.33333334, b: 0.33333334, a: 1}
 --- !u!195 &1383955373462940486
 NavMeshAgent:
   m_ObjectHideFlags: 0
