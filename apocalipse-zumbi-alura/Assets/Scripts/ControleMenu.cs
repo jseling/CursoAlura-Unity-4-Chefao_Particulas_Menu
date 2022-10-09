@@ -16,11 +16,25 @@ public class ControleMenu : MonoBehaviour
 
     public void JogarJogo()
     {
-        SceneManager.LoadScene("game");
+        StartCoroutine(MudarCena("game"));
+    }
+
+    IEnumerator MudarCena(string name)
+    {
+        yield return new WaitForSeconds(0.3f);
+        //se o jogo estiver pausado como no game over, deve-se usar
+        //o WaitForSecondsRealtime
+        SceneManager.LoadScene(name);
     }
 
     public void SairJogo()
     {
+        StartCoroutine(Sair());
+    }
+
+    IEnumerator Sair()
+    {
+        yield return new WaitForSeconds(0.3f);
         Application.Quit();
         #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
