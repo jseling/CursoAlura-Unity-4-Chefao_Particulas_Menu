@@ -27,6 +27,8 @@ public class ControleZumbi : MonoBehaviour, IMatavel
     [HideInInspector]
     public GeradorZumbis MeuGerador;
 
+    public GameObject ParticulaSangueZumbi;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -96,7 +98,10 @@ public class ControleZumbi : MonoBehaviour, IMatavel
     void AtacaJogador()
     {
         int dano = Random.Range(20, 30);
-        compControleJogador.TomarDano(dano);
+
+        Quaternion rotacaoOpostaZumbi = Quaternion.LookRotation(-transform.forward);
+
+        compControleJogador.TomarDano(dano, Jogador.transform.position, rotacaoOpostaZumbi);
     }
 
     void AleatorizarZumbi()
@@ -106,14 +111,20 @@ public class ControleZumbi : MonoBehaviour, IMatavel
         compControleJogador = Jogador.GetComponent<ControleJogador>();
     }
 
-    public void TomarDano(int dano)
+    public void TomarDano(int dano, Vector3 posicao, Quaternion rotacao)
     {
+        ParticulaSangue(posicao, rotacao);
         statusInimigo.Vida -= dano;
         if (statusInimigo.Vida <= 0)
         {
             Morrer();
         }
 
+    }
+
+    void ParticulaSangue(Vector3 posicao, Quaternion rotacao)
+    {
+        Instantiate(ParticulaSangueZumbi, posicao, rotacao);
     }
 
     public void Morrer()

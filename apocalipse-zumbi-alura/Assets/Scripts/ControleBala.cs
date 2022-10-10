@@ -33,13 +33,16 @@ public class ControleBala : MonoBehaviour
 
     void OnTriggerEnter(Collider objetoDeColisao)
     {
+        Quaternion rotacaoOpostaBala = Quaternion.LookRotation(-transform.forward);
         switch(objetoDeColisao.tag)
         {
             case "Inimigo":
-                objetoDeColisao.GetComponent<ControleZumbi>().TomarDano(1);
+                ControleZumbi inimigo = objetoDeColisao.GetComponent<ControleZumbi>();
+                inimigo.TomarDano(1, transform.position, rotacaoOpostaBala);
                 break;
             case "Chefe":
-                objetoDeColisao.GetComponent<ControleChefe>().TomarDano(1);
+                ControleChefe chefe = objetoDeColisao.GetComponent<ControleChefe>();
+                chefe.TomarDano(1, transform.position, rotacaoOpostaBala);
                 break;
         }
         Destroy(gameObject);

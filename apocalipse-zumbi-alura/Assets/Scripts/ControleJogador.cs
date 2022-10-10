@@ -13,6 +13,7 @@ public class ControleJogador : MonoBehaviour, IMatavel, ICuravel
     private MovimentoJogador meuMovimentoJogador;
     private AnimacaoPersonagem meuAnimacaoJogador;
     public Status StatusJogador;
+    public GameObject ParticulaSangue;
 
     private void Start()
     {
@@ -41,8 +42,9 @@ public class ControleJogador : MonoBehaviour, IMatavel, ICuravel
             meuMovimentoJogador.RotacaoJogador(MascaraChao);
     }
 
-    public void TomarDano(int _dano)
+    public void TomarDano(int _dano, Vector3 posicao, Quaternion rotacao)
     {
+        EmitirParticulaSangue(posicao, rotacao);
         StatusJogador.Vida -= _dano;
         scriptControleInterface.AtualizaVidaJogador();
         ControleAudio.instancia.PlayOneShot(SomDeDano);
@@ -51,6 +53,11 @@ public class ControleJogador : MonoBehaviour, IMatavel, ICuravel
         {
             Morrer();
         }
+    }
+
+    void EmitirParticulaSangue(Vector3 posicao, Quaternion rotacao)
+    {
+        Instantiate(ParticulaSangue, posicao, rotacao);
     }
 
     public void Morrer()

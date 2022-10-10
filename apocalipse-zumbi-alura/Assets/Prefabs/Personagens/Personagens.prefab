@@ -621,7 +621,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4758675020849470
 Transform:
   m_ObjectHideFlags: 0
@@ -2704,6 +2704,7 @@ MonoBehaviour:
   scriptControleInterface: {fileID: 0}
   SomDeDano: {fileID: 8300000, guid: b72b2855ceaf9ec489e251f9a4dd808e, type: 3}
   StatusJogador: {fileID: 0}
+  ParticulaSangue: {fileID: 4923085801517601478, guid: 5f2dca24c47815a4aaf36f450c750c66, type: 3}
 --- !u!114 &281372149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2869,7 +2870,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4725317961484282
 Transform:
   m_ObjectHideFlags: 0

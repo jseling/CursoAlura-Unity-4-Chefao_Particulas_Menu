@@ -4,6 +4,6 @@ using UnityEngine;
 
 public interface IMatavel
 {
-    void TomarDano(int dano);
+    void TomarDano(int dano, Vector3 posicao, Quaternion rotacao);
     void Morrer();
 }

@@ -663,6 +663,7 @@ MonoBehaviour:
   DistanciaVagar: 10
   KitMedicoPrefab: {fileID: 1060151288946202, guid: 6150c6f66b7034ec5b3672478195682a, type: 3}
   MeuGerador: {fileID: 0}
+  ParticulaSangueZumbi: {fileID: 4923085801517601478, guid: 5f2dca24c47815a4aaf36f450c750c66, type: 3}
 --- !u!54 &5843470041107006995
 Rigidbody:
   m_ObjectHideFlags: 0
